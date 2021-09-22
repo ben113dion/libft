@@ -6,7 +6,7 @@
 /*   By: jvigneau <jvigneau@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 12:57:46 by jvigneau          #+#    #+#             */
-/*   Updated: 2021/09/17 18:40:21 by bdion            ###   ########.fr       */
+/*   Updated: 2021/09/22 07:54:15 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 int main(void)
 {
-    int a = '4';
-    char	z[] = "wednvopjnadvjnasdvjnSFGSFGSFG@#$%&^";
+    //int 			a = '4';
+    //char			z[] = "wednvopjnadvjnasdvjnSFGSFGSFG@#$%&^";
+	char	mem[] = "allooa";
+	char	mem2[] = "indigogaterie";
 
-	printf("ft_isalpha : %d \n", ft_isalpha(a));
+	/*printf("ft_isalpha : %d \n", ft_isalpha(a));
     printf("isalpha    : %d \n\n", isalpha(a));
     printf("ft_isdigit : %d \n", ft_isdigit(a));
     printf("isdigit    : %d \n\n", isdigit(a));
@@ -36,5 +38,27 @@ int main(void)
 	ft_memset(z, '.', 8*sizeof(char));
 	printf("ft_memset : %s \n", z);
 	memset(z, ',', 8*sizeof(char));
-	printf("memset    : %s \n", z);
+	printf("memset    : %s \n\n", z);
+	bzero(z, 1);
+	printf("bzero[0] = 0    : %d \n", z[0]);
+	printf("bzero[1] = 44   : %d \n", z[1]);
+	printf("bzero[2] = 44   : %d \n\n", z[2]);
+	ft_bzero(z, 5);
+	printf("ft_bzero[3] = 0  : %d \n", z[3]);
+	printf("ft_bzero[4] = 0 : %d \n", z[4]);
+	printf("ft_bzero[5] = 44 : %d \n\n", z[5]);
+	ft_memset(z, '1', 8*sizeof(char));
+	memcpy(z, mem, ft_strlen(mem) + 1);
+	printf("memcpy    : %s\n", z);
+	ft_memmove(z, mem2, 8);
+	printf("ft_memmove : %s\n", z);*/
+	ft_strlcat(mem, mem2, 6);
+	printf("%d \n", atoi("-2354245sdfhsfh"));
+	printf("%d \n", atoi(" 	+ 2354245sdfhsfh"));
+	printf("%d \n", atoi("-2354245sdfhsfh"));
+	printf("%d \n\n", atoi());
+	printf("%d \n", ft_atoi("-2354245sdfhsfh"));
+	printf("%d \n", ft_atoi(" 	+ 2354245sdfhsfh"));
+	printf("%d \n", ft_atoi("-2354245sdfhsfh"));
+	printf("%d \n", ft_atoi());
 }
