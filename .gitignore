@@ -1,0 +1,4 @@
+.DS*
+42example
+*.gch
+*.o
