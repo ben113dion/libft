@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jvigneau <jvigneau@student.42quebec>       +#+  +:+       +#+        */
+/*   By: bdion <bdion@student.42quebec>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 12:57:46 by jvigneau          #+#    #+#             */
-/*   Updated: 2021/09/22 07:56:24 by bdion            ###   ########.fr       */
+/*   Created: 2021/09/14 12:57:46 by bdion	           #+#    #+#             */
+/*   Updated: 2021/09/22 07:58:59 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int main(void)
 	memcpy(z, mem, ft_strlen(mem) + 1);
 	printf("memcpy    : %s\n", z);
 	ft_memmove(z, mem2, 8);
-	printf("ft_memmove : %s\n", z);*/
+	printf("ft_memmove : %s\n", z);
 	ft_strlcat(mem, mem2, 6);
 	printf("%d \n", atoi("-2354245sdfhsfh"));
 	printf("%d \n", atoi(" 	+ 2354245sdfhsfh"));
@@ -60,5 +60,5 @@ int main(void)
 	printf("%d \n", ft_atoi("-2354245sdfhsfh"));
 	printf("%d \n", ft_atoi(" 	+ 2354245sdfhsfh"));
 	printf("%d \n", ft_atoi("-2354245sdfhsfh"));
-	printf("%d \n", ft_atoi(""));
+	printf("%d \n", ft_atoi(""));*/
 }
