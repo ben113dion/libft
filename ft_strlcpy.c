@@ -6,7 +6,7 @@
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 06:54:00 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/20 07:08:57 by bdion            ###   ########.fr       */
+/*   Updated: 2021/09/22 08:22:42 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			dst[i] = src[i];
 		dst[i] = 0;
 	}
-	while (src[++i]);
+	while (src[i])
+		i++;
 	return (i);
 }

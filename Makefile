@@ -6,20 +6,12 @@
 #    By: ncolomer <ncolomer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/11 21:19:28 by ncolomer          #+#    #+#              #
-#    Updated: 2021/09/22 07:56:55 by bdion            ###   ########.fr        #
+#    Updated: 2021/09/22 08:08:08 by bdion            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS			=	ft_isalnum.c ft_isprint.c \
-					ft_strlcat.c ft_strncmp.c ft_isalpha.c \
-					ft_memcpy.c  ft_strchr.c  ft_strlcpy.c \
-					ft_tolower.c ft_bzero.c   ft_isascii.c \
-					ft_memmove.c  ft_strlen.c  ft_strrchr.c \
-					ft_toupper.c ft_isdigit.c ft_memset.c \
-					ft_atoi.c	
+SRCS			=	ft_isalnum.c ft_isprint.c ft_strlcat.c ft_strncmp.c ft_isalpha.c ft_memcpy.c  ft_strchr.c  ft_strlcpy.c ft_tolower.c ft_bzero.c ft_isascii.c ft_memmove.c  ft_strlen.c  ft_strrchr.c ft_toupper.c ft_isdigit.c ft_memset.c ft_atoi.c ft_calloc.c
 OBJS			= $(SRCS:.c=.o)
-
-
 
 CC				= gcc
 RM				= rm -f
@@ -39,5 +31,3 @@ fclean:			clean
 				$(RM) $(NAME)
 
 re:				fclean $(NAME)
-
-.PHONY:			all clean fclean re bonus

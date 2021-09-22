@@ -6,13 +6,13 @@
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 07:41:56 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/22 07:53:29 by bdion            ###   ########.fr       */
+/*   Updated: 2021/09/22 08:28:52 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_exp10(int	len)
+int	ft_exp10(int len)
 {
 	int	i;
 	int	num;
@@ -39,15 +39,15 @@ int	ft_nti(char *str, int len)
 		i++;
 		len--;
 	}
-	return (num);	
+	return (num);
 }
 
 int	ft_atoi(const char *str)
 {
-	long	long	int		i;
-	long	long	int 	neg;
-	long	long	int		j;
-	char	cut[21];
+	long long int	i;
+	long long int	neg;
+	long long int	j;
+	char			cut[21];
 
 	i = 0;
 	if (!str)
@@ -68,5 +68,5 @@ int	ft_atoi(const char *str)
 		j++;
 		i++;
 	}
-	return(neg * ft_nti(cut, j));
+	return (neg * ft_nti(cut, j));
 }

@@ -6,7 +6,7 @@
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 14:21:48 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/20 07:45:32 by bdion            ###   ########.fr       */
+/*   Updated: 2021/09/22 08:28:31 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,10 @@ void					*ft_memset(void *b, int c, size_t len);
 void					ft_bzero(void *s, size_t n);
 void					*ft_memcpy(void *dst, const void *src, size_t n);
 void					*ft_memmove(void *dst, const void *src, size_t len);
+void					*ft_calloc(size_t count, size_t size);
 size_t					ft_strlcpy(char *dst, const char *src, size_t size);
 size_t					ft_strlcat(char *dst, const char *src, size_t size);
 char					ft_strchr(const char *s, int c);
-char					ft_strrchr(const char *s, int c);
+char					*ft_strrchr(const char *s, int c);
 
 #endif

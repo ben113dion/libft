@@ -6,16 +6,16 @@
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 14:11:11 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/17 14:20:55 by bdion            ###   ########.fr       */
+/*   Updated: 2021/09/22 08:18:34 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	if (ft_isdigit(c) == 1
-			|| ft_isalpha(c) == 1)
+		|| ft_isalpha(c) == 1)
 		return (1);
 	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 14:11:11 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/17 14:28:16 by bdion            ###   ########.fr       */
+/*   Updated: 2021/09/22 08:19:15 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

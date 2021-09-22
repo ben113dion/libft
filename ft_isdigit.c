@@ -6,13 +6,13 @@
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 14:11:11 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/17 14:12:57 by bdion            ###   ########.fr       */
+/*   Updated: 2021/09/22 08:19:52 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')	
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

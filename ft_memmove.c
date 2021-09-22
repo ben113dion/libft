@@ -6,14 +6,14 @@
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 16:04:18 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/20 06:51:59 by bdion            ###   ########.fr       */
+/*   Updated: 2021/09/22 08:20:29 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
 #include <stdio.h>
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
