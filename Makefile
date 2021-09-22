@@ -6,7 +6,7 @@
 #    By: ncolomer <ncolomer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/11 21:19:28 by ncolomer          #+#    #+#              #
-#    Updated: 2021/09/21 19:54:01 by bdion            ###   ########.fr        #
+#    Updated: 2021/09/22 07:56:55 by bdion            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,7 @@ SRCS			=	ft_isalnum.c ft_isprint.c \
 					ft_atoi.c	
 OBJS			= $(SRCS:.c=.o)
 
-BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
-					ft_lstdelone.c ft_lstiter.c ft_lstlast.c \
-					ft_lstmap.c ft_lstnew.c ft_lstsize.c
-BONUS_OBJS		= $(BONUS:.c=.o)
+
 
 CC				= gcc
 RM				= rm -f
@@ -36,14 +33,11 @@ $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+				$(RM) $(OBJS) 
 
 fclean:			clean
 				$(RM) $(NAME)
 
 re:				fclean $(NAME)
-
-bonus:			$(OBJS) $(BONUS_OBJS)
-				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY:			all clean fclean re bonus

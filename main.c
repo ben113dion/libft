@@ -6,7 +6,7 @@
 /*   By: jvigneau <jvigneau@student.42quebec>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 12:57:46 by jvigneau          #+#    #+#             */
-/*   Updated: 2021/09/22 07:54:15 by bdion            ###   ########.fr       */
+/*   Updated: 2021/09/22 07:56:24 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ int main(void)
 	printf("%d \n", atoi("-2354245sdfhsfh"));
 	printf("%d \n", atoi(" 	+ 2354245sdfhsfh"));
 	printf("%d \n", atoi("-2354245sdfhsfh"));
-	printf("%d \n\n", atoi());
+	printf("%d \n\n", atoi(""));
 	printf("%d \n", ft_atoi("-2354245sdfhsfh"));
 	printf("%d \n", ft_atoi(" 	+ 2354245sdfhsfh"));
 	printf("%d \n", ft_atoi("-2354245sdfhsfh"));
-	printf("%d \n", ft_atoi());
+	printf("%d \n", ft_atoi(""));
 }
