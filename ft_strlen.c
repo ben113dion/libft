@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 unsigned long int	ft_strlen(const char *s)
 {
 	unsigned long int	i;

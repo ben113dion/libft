@@ -50,8 +50,6 @@ int	ft_atoi(const char *str)
 	char			cut[21];
 
 	i = 0;
-	if (!str)
-		return (0);
 	while (str[i] == '	' || str[i] == ' ')
 		i++;
 	neg = 1;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bdion <bdion@student.42quebec>             +#+  +:+       +#+        */
+/*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/14 12:57:46 by bdion	           #+#    #+#             */
-/*   Updated: 2021/09/22 08:27:03 by bdion            ###   ########.fr       */
+/*   Created: 2021/11/10 13:27:30 by bdion             #+#    #+#             */
+/*   Updated: 2021/11/11 14:29:30 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,13 @@
 
 int	main(void)
 {
+	char	*pch;
+	char	str[] = "Example string";
+
+	pch = (char*)ft_memchr(str, 'p', ft_strlen(str));
+	if (pch != NULL)
+		printf("'p' found at position '%s'.\n", pch);
+	else
+		printf("'p' not found.\n");
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 06:54:00 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/20 07:23:05 by bdion            ###   ########.fr       */
+/*   Updated: 2021/11/10 12:43:59 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,19 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i[3];
+	size_t	i[2];
 
-	i[0] = -1;
+	i[0] = 0;
 	i[1] = ft_strlen(dst);
-	i[2] = ft_strlen(dst);
-	if (size > 0 && ft_strlen(dst) > size - 1)
+	if (size == 0)
+		return (ft_strlen(src));
+	if (i[1] > size - 1)
+		return (size + ft_strlen(src));
+	while (src[i[0]] != '\0' && i[0] + i[1] < size - 1)
 	{
-		while (src[++i[0]] && ft_strlen(dst) + i[0] < (size - 1))
-			dst[i[1]++] = src[i[0]];
-		dst[i[1]] = 0;
+		dst[i[0] + i[1]] = src[i[0]];
+		i[0]++;
 	}
-	if (i[2] >= size)
-		i[2] = size;
-	return (i[2] + ft_strlen(src));
+	dst[i[0] + i[1]] = 0;
+	return (i[1] + ft_strlen(src));
 }
