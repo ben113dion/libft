@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 07:41:56 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/22 08:28:52 by bdion            ###   ########.fr       */
+/*   Created: 2021/09/22 08:42:44 by bdion             #+#    #+#             */
+/*   Updated: 2021/09/22 08:49:27 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_atoi(const char *str)
+int     ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    int i[2];
-
-    i[1] = 0;
-    i[0] = 1;
-    while (ft_isspace(*str))
-        str++;
-    if (*str == '-')
-        i[0] = - 1;
-    if (*str == '-' || *str == '+')
-        str++;
-    while (*str >= '0' && *str <= '9')
-        i[1] = i[1] * 10 + *str++ - '0';
-    return (i[1] * i[0]);
+        if (!n)
+                return (0);
+        while (--n && *(unsigned char *)s1 == *(unsigned char *)s2)
+        {
+                (unsigned char *)s1++;
+                (unsigned char *)s2++;
+        }
+        return ((int)(*(unsigned char *)s1 - *(unsigned char *)s2));
 }
-

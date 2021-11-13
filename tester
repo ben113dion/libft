@@ -1,0 +1,1 @@
+git clone https://github.com/Tripouille/libftTester;cd libftTester;make;cd ..;rm -rf libftTester;rm *.o *.a

@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/10 13:27:30 by bdion             #+#    #+#             */
-/*   Updated: 2021/11/11 14:29:30 by bdion            ###   ########.fr       */
+/*   Created: 2021/09/20 07:41:56 by bdion             #+#    #+#             */
+/*   Updated: 2021/09/22 08:28:52 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+int     ft_isspace(int c)
 {
-	char	*pch;
-	char	str[] = "Example string";
-
-	pch = (char*)ft_memchr(str, 'p', ft_strlen(str));
-	if (pch != NULL)
-		printf("'p' found at position '%s'.\n", pch);
-	else
-		printf("'p' not found.\n");
-	return (0);
+    return (c == ' ' || c == '\r' || c == '\f' || c == '\v' || c == '\n' || c == '\t');
 }
