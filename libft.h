@@ -20,6 +20,7 @@
 # include <stdlib.h>
 # define LIBFT_H
 
+char    				*ft_strdup(const char *s);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
 void				*ft_calloc(size_t count, size_t size);
