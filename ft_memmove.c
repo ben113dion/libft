@@ -6,7 +6,7 @@
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/18 16:04:18 by bdion             #+#    #+#             */
-/*   Updated: 2021/09/22 08:20:29 by bdion            ###   ########.fr       */
+/*   Updated: 2021/12/16 13:15:10 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,25 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int	i;
+	char	*dst2;
+	char	*src2;
+	int		i;
 
-	if ((!dst) || (!src))
+	if ((!dst) && (!src))
 		return (NULL);
-	if (dst > src)
-	{	
+	dst2 = (char *)dst;
+	src2 = (char *)src;
+	if (dst2 > src2)
+	{
 		i = (int)len;
 		while (--i >= 0)
-			*(char *)(dst + i) = *(char *)(src + i);
+			*(char *)(dst2 + i) = *(char *)(src2 + i);
 	}
 	else
 	{
 		i = -1;
 		while (++i < (int)len)
-			*(char *)(dst + i) = *(char *)(src + i);
+			*(char *)(dst2 + i) = *(char *)(src2 + i);
 	}
-	return (dst);
+	return (dst2);
 }

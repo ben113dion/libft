@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 07:41:56 by bdion             #+#    #+#             */
-/*   Updated: 2021/12/14 12:15:18 by bdion            ###   ########.fr       */
+/*   Created: 2021/12/12 10:42:01 by bdion             #+#    #+#             */
+/*   Updated: 2021/12/14 12:09:37 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	return (c == ' ' || c == '\r' || c == '\f' || c == '\v' || \
-			c == '\n' || c == '\t');
-}
+	char	*rtn;
+	size_t	s1l;
+	size_t	s2l;
 
-int	ft_atoi(const char *str)
-{
-	int	i[2];
-
-	i[1] = 0;
-	i[0] = 1;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
-		i[0] = -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
-		i[1] = i[1] * 10 + *str++ - '0';
-	return (i[1] * i[0]);
+	if (!s1 && !s2)
+		return (ft_strdup(""));
+	if (!s1 && s2)
+		return (ft_strdup(s2));
+	if (s1 && !s2)
+		return (ft_strdup(s1));
+	s1l = ft_strlen(s1);
+	s2l = ft_strlen(s2);
+	rtn = malloc(sizeof(char) * (s1l + s2l + 1));
+	if (!rtn)
+		return (0);
+	ft_memmove(rtn, s1, s1l);
+	ft_memmove(rtn + s1l, s2, s2l);
+	rtn[s1l + s2l] = 0;
+	return (rtn);
 }

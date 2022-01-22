@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 07:41:56 by bdion             #+#    #+#             */
-/*   Updated: 2021/12/14 12:15:18 by bdion            ###   ########.fr       */
+/*   Updated: 2021/12/15 16:09:24 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	return (c == ' ' || c == '\r' || c == '\f' || c == '\v' || \
-			c == '\n' || c == '\t');
-}
+	size_t	i;
+	size_t	j;
+	char	*str;
 
-int	ft_atoi(const char *str)
-{
-	int	i[2];
-
-	i[1] = 0;
-	i[0] = 1;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
-		i[0] = -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
-		i[1] = i[1] * 10 + *str++ - '0';
-	return (i[1] * i[0]);
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		len = 0;
+	if (len >= (ft_strlen(s) - start))
+		len = ft_strlen(s) - start;
+	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!str)
+		return (NULL);
+	i = -1;
+	j = 0;
+	while (s[++i])
+	{
+		if (i >= start && j < len)
+		{
+			str[j] = s[i];
+			j++;
+		}
+	}
+	str[j] = 0;
+	return (str);
 }

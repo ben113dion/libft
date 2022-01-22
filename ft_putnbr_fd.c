@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bdion <bdion@student.42quebec.co>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/20 07:41:56 by bdion             #+#    #+#             */
-/*   Updated: 2021/12/14 12:15:18 by bdion            ###   ########.fr       */
+/*   Created: 2021/12/12 10:29:25 by bdion             #+#    #+#             */
+/*   Updated: 2021/12/14 12:14:26 by bdion            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	return (c == ' ' || c == '\r' || c == '\f' || c == '\v' || \
-			c == '\n' || c == '\t');
-}
+	char	pchr;
 
-int	ft_atoi(const char *str)
-{
-	int	i[2];
-
-	i[1] = 0;
-	i[0] = 1;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
-		i[0] = -1;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (*str >= '0' && *str <= '9')
-		i[1] = i[1] * 10 + *str++ - '0';
-	return (i[1] * i[0]);
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	else
+	{
+		if (n < 0)
+		{
+			write(fd, "-", 1);
+			n = -n;
+			ft_putnbr_fd(n, fd);
+		}
+		else if (n < 10)
+		{
+			pchr = n + 48;
+			write(fd, &pchr, 1);
+		}
+		else
+		{
+			ft_putnbr_fd(n / 10, fd);
+			pchr = (n % 10) + 48;
+			write(fd, &pchr, 1);
+		}
+	}
 }
